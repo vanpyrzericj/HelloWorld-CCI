@@ -3,18 +3,19 @@ orbs:
   node: circleci/node@4.1.0
 jobs:
   test:
-    docker:
-      - image: 'cimg/base:stable'
+    executor:
+      name: node/default
+      tag: '13.14'
     steps:
       - checkout
-      - node/install:
-          install-yarn: false
-      - run: 'sudo npm install -g npm@latest'
-      - run: 'sudo npm install -g mocha'
-      - run: 'sudo npm install -g mocha-junit-reporter'  
+      - node/install-packages
+      - run: 
+          command: 'sudo npm install -g mocha'
+      - run: 
+          command: 'sudo npm install -g mocha-junit-reporter'  
       
-      - run: 'npm install'
-      - run: 'mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=reports/mocha/test-results.xml'
+      - run: 
+          command: 'mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=reports/mocha/test-results.xml'
       
       - store_test_results:
                 path: reports
