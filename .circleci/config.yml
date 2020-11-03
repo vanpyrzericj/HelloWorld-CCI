@@ -18,3 +18,7 @@ jobs:
                 path: reports
       - store_artifacts:
           path: ./reports/mocha/test-results.xml
+workflows:
+  workflow:
+    jobs:
+      - test
