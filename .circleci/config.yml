@@ -7,6 +7,8 @@ jobs:
       - image: 'cimg/base:stable'
     steps:
       - checkout
+      - node/install:
+          install-yarn: false
       - run: 'sudo npm install -g npm@latest'
       - run: 'sudo npm install -g mocha'
       - run: 'sudo npm install -g mocha-junit-reporter'  
