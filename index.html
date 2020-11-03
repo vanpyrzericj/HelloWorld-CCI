@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <button type="button">Toggle Me!</button>
+    <script>
+      var isNiceMessage = true;
+      document
+        .querySelector("button")
+        .addEventListener("click", function (event) {
+          document.querySelector("h1").innerText = isNiceMessage
+            ? "Hello World!"
+            : "Goodbye Cruel World!";
+          isNiceMessage = !isNiceMessage;
+        });
+    </script>
+  </body>
+</html>

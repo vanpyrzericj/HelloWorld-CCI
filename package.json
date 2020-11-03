@@ -1,0 +1,24 @@
+{
+  "name": "helloworld-cci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanpyrzericj/HelloWorld-CCI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanpyrzericj/HelloWorld-CCI/issues"
+  },
+  "homepage": "https://github.com/vanpyrzericj/HelloWorld-CCI#readme",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0"
+  },
+  "dependencies": {}
+}
